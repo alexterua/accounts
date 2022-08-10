@@ -16,12 +16,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [IndexController::class, 'index'])->name('index');
-
-Route::get('/sms/send/{to}', function(\Nexmo\Client $nexmo, $to){
-    $message = $nexmo->message()->send([
-        'to' => $to,
-        'from' => '@leggetter',
-        'text' => 'Sending SMS from Laravel. Woohoo!'
-    ]);
-    Log::info('sent message: ' . $message['message-id']);
-});
+Route::get('/{account_id}/sendSms/{smsSender}', [IndexController::class, 'sendSms'])->name('index');

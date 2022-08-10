@@ -10,7 +10,7 @@
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.7",
-        "nexmo/laravel": "^2.0"
+        "nutnet/laravel-sms": "^0.11.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",

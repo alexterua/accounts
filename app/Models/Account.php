@@ -12,4 +12,9 @@ class Account extends Model
 
     protected $table = 'accounts';
     protected $guarded = false;
+
+    public function simCards()
+    {
+        return $this->hasMany(SimCard::class);
+    }
 }
